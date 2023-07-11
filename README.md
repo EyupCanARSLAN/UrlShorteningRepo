@@ -4,6 +4,7 @@ Ef Core Migrations Approach
 Kurulum için öncelikle Migrations klasörü yoksa veya silip yeniden oluşturmak istiyorsan
 
 //dotnet ef migrations add MyFirstMigration
+
 //dotnet ef database update
 
 komutlarını çalıştır.
