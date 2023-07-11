@@ -1,15 +1,12 @@
-﻿Ef Core Migrations Approach
+﻿-Ef Core Create Db If Not Exist-
 
-Kurulum için öncelikle Migrations klasörü yoksa veya silip yeniden oluşturmak istiyorsan
 
-//dotnet ef migrations add MyFirstMigration
-//dotnet ef database update
+Program.cs deki bu kod bloğu sayesinde CreateDbIfNotExist approach sağlanmış olur.
 
-komutlarını çalıştır.
-
-Daha sonrasında Migration.Bat daki komutları veya Migration.Bat ı çalıştır.
-
-Migration.Bat daki Komutlar "IDesignTimeDbContextFactory" interface ini implemente eden "DesignTimeBlogContextFactory"
-class ını bulup execute edeccektir !!!
-
-Böylece Database oluşturulacaktır.
+var app = builder.Build();
+// ensure database and tables exist
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<UrlShorteningDbContext>();
+    context.Database.EnsureCreated();
+}
