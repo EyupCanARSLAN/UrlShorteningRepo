@@ -11,6 +11,16 @@
 
 ![image](https://user-images.githubusercontent.com/22656439/221718973-b9623948-fdf3-4324-a87b-ce562c292aa0.png)
 
+
+
+---------------
+You can create custom shorening url via this api
+
+![image](https://user-images.githubusercontent.com/22656439/221719319-7fba07e8-701a-4535-a49c-cb461164eb17.png)
+
+
+
+
 # Ef Core Features
 
 There are 2 diffrent Ef Core Code Firt Approach implemented as Migration and CreateDbIfNotExist. Look feature brach to discover this.
