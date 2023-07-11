@@ -1,4 +1,4 @@
-# About Ef Core Create Db If Not Exist-
+# About Ef Core Create Db If Not Exist
 
 Program.cs deki bu kod bloğu sayesinde CreateDbIfNotExist approach sağlanmış olur.
 ```
