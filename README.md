@@ -1,3 +1,21 @@
+# About Ef Core Migrations
+Ef Core Migrations Approach
+
+Kurulum için öncelikle Migrations klasörü yoksa veya silip yeniden oluşturmak istiyorsan
+
+//dotnet ef migrations add MyFirstMigration
+//dotnet ef database update
+
+komutlarını çalıştır.
+
+Daha sonrasında Migration.Bat daki komutları veya Migration.Bat ı çalıştır.
+
+Migration.Bat daki Komutlar "IDesignTimeDbContextFactory" interface ini implemente eden "DesignTimeBlogContextFactory"
+class ını bulup execute edeccektir !!!
+
+Böylece Database oluşturulacaktır.
+
+# Url Shortening
 
 1- Create a shortening url via this end point
 ![image](https://user-images.githubusercontent.com/22656439/221718625-ae69b340-3011-4f10-a7e7-d9b9af56f046.png)
