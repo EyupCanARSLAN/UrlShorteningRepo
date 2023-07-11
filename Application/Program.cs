@@ -20,6 +20,13 @@ builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();
 
 
 var app = builder.Build();
+// ensure database and tables exist
+{
+    using var scope = app.Services.CreateScope();
+    var context = scope.ServiceProvider.GetRequiredService<UrlShorteningDbContext>();
+    context.Database.EnsureCreated();
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
